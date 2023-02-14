@@ -1,7 +1,11 @@
-import '../styles/globals.css'
+//Next.JS가 최초 실행 될 때 _app.js 먼저 확인
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import Layout from "../components/Layout";
+
+export default function App({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
-
-export default MyApp
